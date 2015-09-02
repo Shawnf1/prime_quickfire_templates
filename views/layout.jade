@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/handlebars.min.js')
+    script(src='/javascripts/app.js')
+    script#student-template(type="text/x-handlebars-template")
+        |{{#each this}}
+        li {{lastName}}, {{firstName}}
+        |{{/each}}
